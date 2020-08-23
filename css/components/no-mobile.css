@@ -1,3 +1,14 @@
+@keyframes screen {
+    from {
+        color:red;
+    }
+    to{
+        color: black;
+    }
+}
+
+
+
 #no-mobile {
     position: absolute;
     z-index:99;
@@ -5,14 +16,99 @@
     width:100vw;
     background-color: var(--yellow);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
+    flex-direction: column;
+    
+    align-items:center;
+    padding-top: 90px;
+    font-size: 40px;
+    font-weight: 600;
     top: 0;
+}
+
+#no-mobile span:first-child{
+    animation: screen 1s ease-in-out infinite;
+    margin: 70px 0;
 }
 
 @media screen and (max-width:645px) {
     #no-mobile {
         display: none;
     }
+}
+
+.js-toDoForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:400px;
+    height: 70px;
+}
+
+.js-toDoForm input {
+    background-color: var(--yellow);
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+.js-toDoForm input::placeholder {
+    text-align: center;
+    font-size: 20px;
+}
+
+.js-toDoForm input:focus {
+    border-bottom: 2px solid tomato;
+}
+.js-toDoList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.js-toDoList button {
+    padding-bottom:10px;
+    width:30px;
+    font-size:15px;
+  background-color: transparent;
+  border:none;
+}
+
+@keyframes PP {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(180deg);
+
+    }
+}
+
+.border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    width:100px;
+    animation: PP .8s ease-in-out infinite;
+    will-change: transform;
+}
+
+.border div:nth-child(1){
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: turquoise;
+}
+.border div:nth-child(2){
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: turquoise;
+
+}
+.border div:nth-child(3){
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: turquoise;
 }
